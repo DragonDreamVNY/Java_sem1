@@ -67,10 +67,10 @@ public class LeapYear {
 
         if (d < nDays) 
                 d += 1; //add one day to itself
-           
-           // OR if it's the last day of the month
-           else if (d == nDays) { 
-                d = 1; // successor is first day of new month
+                
+           // OR if it's the last day of the month OR if user enters wrong date greater than allowed
+           else if ((d == nDays) || (d > nDays))  { 
+                d = 1; // reset: successor is first day of new month
                 System.out.println("It's the first day of a new month");
            
                 // Do this if first day of new month and possibly new year
