@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package armstrong;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -12,70 +8,47 @@ import javax.swing.JOptionPane;
  */
 public class Armstrong {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        //initialise then overide
-        double a, b, c;
-        double armNum = 0;
-        a=0;
-        b =0;
-        c=0;
+        //variables
+        final int MAX = 999;
+        int n =100;
+        int a, b, c, compare, armNum;
+        String output = "List of Armstrong numbers between " + n + " and " + MAX + "\n";
+        
 
-        boolean end = false;
-        double compare_a = 0; 
-        double compare_b =0; 
-        double compare_c = 0;
-        
-        int count = 100; //counter from 100...999
-        while (count <= 999){
-                   
-            while(a <= 9){
-                a++; //add 1 to a
-                compare_a = a; // temp num is assigned new a value for comparison
-                compare_a = Math.pow(a, 3); //
-                armNum =  (compare_a + compare_b + compare_c);
+            while(n < MAX){
+                compare = n; //assign value to temporary. Break this value up to three digits to compare
                 
-                // 'a' compare to armNum digit1, 'b' to arnmNum digit2, 'c' to armNum digit3
-                if ( (compare_a == armNum/100) && ( compare_b == ((armNum%100)/10))  && ( compare_c == ((armNum%100)%10)) ){
-                     a = armNum/100;//to check if a b c and armstrong number match digits 
+                /*--- extra first, second, third digits ---*/
+                
+                //extract the first number
+                a = compare/100;
+                
+                 // extract the second number
+                compare = compare%100;   
+                
+                b= compare / 10; 
+                
+                // extract the third number
+                compare = compare % 10;
+                        // is the remaining digit.
+                c =compare; 
+
+                 armNum = (int) Math.pow(a, 3) + (int) Math.pow(b, 3) + (int) Math.pow(c, 3);
+                //  if total == n you have an Armstrong number
+                if ( armNum == n ){  
                      
-                } //end if compare 
-                else a++;
+                    output += armNum + "\n" ; //to check if a b c and armstrong number match digits  plus a New Line
+                     
+                } //end if compare and total
                 
-                while(b<=9){
-                    b++;
-                    compare_b = b; // temp num is assigned new a value for comparison
-                    compare_b = Math.pow(b, 3); //
-                    
-                    
-                    if ( (compare_a == armNum/100) && ( compare_b == ((armNum%100)/10))  && ( compare_c == ((armNum%100)%10)) ){
-                     end = true; //to check if a b c and armstrong number match digits 
-                }
-                
-                if (c<=9){
-                    c++;
-                    compare_c = c; // temp num is assigned new a value for comparison
-                    compare_c = Math.pow(c, 3); //
-                }
-                armNum += (compare_a + compare_b + compare_c); // armNum for three numbers 
-                
-                
-                  
-                        
+                // add count +1 until 999 and prevent inf loop
+                 n++; 
             } // end while loop for 'a' 'b' 'c'
-        count++; // add count +1 until 999 and prevent inf loop
-        
-            if ( end == true ){      
-                System.out.println("Armstrong Number is : " + armNum);
-            } else System.out.println("not a number : ");
             
-        } // end while until 999
-        
-        
-       
-        
+            //display all Armstrong numbers in a message box
+        JOptionPane.showMessageDialog(null, output);
     }
-    
+
+
 }
