@@ -29,12 +29,12 @@ public class DoWhile {
                 System.out.print("You've entered : " + n +"\n"); 
             }
            */       
-        
+        temp = 0;
         do {
-            temp = 0; 
+             
                
-            }
-        } while( );
+            
+        } while (temp < n);
         
         
         output += "The number of 0's in that number is : \t" + zeroCount + "\n";
