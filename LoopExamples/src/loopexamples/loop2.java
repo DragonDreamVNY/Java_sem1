@@ -5,28 +5,32 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author DragonDream
+ * Exercise 2 Loop examples
  */
-public class loop2 {
+public class Loop2 {
 
     
     public static void main(String[] args) {
         
         int N;
-        int i = 0; 
+        int i = 1; 
         
         String input = JOptionPane.showInputDialog("Enter your Number");
         N = Integer.parseInt(input);
         
         // String output = System.out.println(("\t" + N)) ;
                 
-        while (i < N )
+        while (i < N ){
+            System.out.print(i + "\t");
+            
             if (i % 8 == 0) {
-            System.out.print("\n" );
+            System.out.println("\n");
             }
             
         i++;
-        System.out.print(i);
         
-    }
+        
+        }
     
+    }
 }

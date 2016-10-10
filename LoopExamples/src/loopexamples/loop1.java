@@ -6,7 +6,7 @@ package loopexamples;
  *
  * @author DragonDream
  */
-public class loop1 {
+public class Loop1 {
 
     
     public static void main(String[] args) {
