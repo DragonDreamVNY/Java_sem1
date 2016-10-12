@@ -8,7 +8,7 @@ public class DoWhile {
         
         // variables
         String input; 
-        String output = "";
+        String output;
         int n, temp;
         int zeroCount = 0, oddCount = 0, evenCount = 0;
         
@@ -31,7 +31,7 @@ public class DoWhile {
            */       
         temp = 0;
         do {
-            
+             
                
             
         } while (temp < n);

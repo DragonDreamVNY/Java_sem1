@@ -1,0 +1,66 @@
+<record>
+  <date>2016-10-12T21:41:17</date>
+  <millis>1476304877240</millis>
+  <sequence>6</sequence>
+  <level>300</level>
+  <thread>16</thread>
+  <message>CPU INFO</message>
+  <param>4</param>
+</record>
+<record>
+  <date>2016-10-12T21:41:17</date>
+  <millis>1476304877269</millis>
+  <sequence>7</sequence>
+  <level>300</level>
+  <thread>16</thread>
+  <message>SCREEN SIZE</message>
+  <param>1280</param>
+  <param>800</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-10-12T21:41:17</date>
+  <millis>1476304877270</millis>
+  <sequence>8</sequence>
+  <level>700</level>
+  <thread>16</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2016-10-12T21:41:20</date>
+  <millis>1476304880779</millis>
+  <sequence>18</sequence>
+  <logger>org.netbeans.ui.metrics.laf</logger>
+  <level>800</level>
+  <thread>16</thread>
+  <message>USG_LOOK_AND_FEEL</message>
+  <param>Aqua</param>
+  <param>Mac OS X</param>
+</record>
+<record>
+  <date>2016-10-12T21:41:27</date>
+  <millis>1476304887659</millis>
+  <sequence>21</sequence>
+  <level>800</level>
+  <thread>25</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>8589934592</param>
+</record>
+<record>
+  <date>2016-10-12T21:42:33</date>
+  <millis>1476304953697</millis>
+  <sequence>27</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>400</level>
+  <thread>20</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Actions$MenuItem[New Project...]</param>
+  <param>org.openide.awt.Actions$MenuItem</param>
+  <param>org.openide.awt.AlwaysEnabledAction[Ne&amp;w Project...]</param>
+  <param>org.openide.awt.AlwaysEnabledAction</param>
+  <param>Ne&amp;w Project...</param>
+</record>
