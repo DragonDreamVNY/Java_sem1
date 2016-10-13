@@ -11,14 +11,19 @@ import javax.swing.JOptionPane;
  *
  * @author DragonDream
  * exercise 4
+ * Enter positive number (let’s call it N) from the user and print the first N rows
+ * 1
+ * 2 4 
+ * 3 6 9
+ * 4 8 12 16
  */
 public class Loop4 {
     public static void main (String[] args){
     
         int N; //user input
-        int i = 0; // counter for comparing to N, starts at 1 before increasing by factor "Row" each loop
-        int row = 0; // counter for jumping rows
-        int multi; // for multiplying and appending to Output String
+       // ' i'  counter for comparing to N, starts at 1 before increasing by factor "Row" each loop
+        // int row = 0; // counter for jumping rows
+       //  int multi; // for multiplying and appending to Output String
         
         String input, output = ""; //user Input to be parsed to N, and Output for storing number each Loop iteration
         
@@ -33,6 +38,18 @@ public class Loop4 {
                 System.exit(0); 
         } // end if
         
+        for (int i =1; i <= N; i++){
+        
+            for(int  row= 1; row<=i; row++){
+                 System.out.print( row*i + "\t");
+            } // end row
+            System.out.println("");
+         
+        } //end for 
+        
+        
+        
+        /*
         do{
            
             i++; //start with one... repeat
@@ -51,6 +68,8 @@ public class Loop4 {
             System.out.print("\t"); 
             
         } while (i < N); //end Do-While
+        
+     */
         
         
     } // end  main

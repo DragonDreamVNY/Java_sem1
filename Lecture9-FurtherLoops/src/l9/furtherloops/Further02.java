@@ -37,7 +37,8 @@ public class Further02 {
             } //end if
         }// end Loop
     
-        
-        System.out.print("sum of even Fibonacci Numbers up to 4 million is  :\t" + even);
+        //first EVEN Fibonacci number is 1, [ 2 ], 3,5
+        System.out.println("sum of even Fibonacci Numbers to 4 million is  :\n" + 
+                even +2 );
     } // end main 
 } // end class
