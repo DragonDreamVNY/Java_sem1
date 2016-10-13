@@ -16,8 +16,10 @@ public class Loop4 {
     public static void main (String[] args){
     
         int N; //user input
-        int i = 1; // counter for comparing to N, starts at 1 before increasing by factor "Row" each loop
+        int i = 0; // counter for comparing to N, starts at 1 before increasing by factor "Row" each loop
         int row = 0; // counter for jumping rows
+        int multi; // for multiplying and appending to Output String
+        
         String input, output = ""; //user Input to be parsed to N, and Output for storing number each Loop iteration
         
         /* User input
@@ -26,27 +28,30 @@ public class Loop4 {
         N = Integer.parseInt(input); 
         
         // input handler for positive numbers only
-        if (N <= 0){ 
+        if (N <= 0) { 
                 JOptionPane.showMessageDialog(null,"It must be a Positive Number!");
                 System.exit(0); 
         } // end if
         
         do{
-            output += i; //append to output, the current i values including Tabs, multiples
-            output += "\t"; 
-            while (row < N) {
+           
+            i++; //start with one... repeat
+            
+            while (row < i) { //catch up to i Counter...
                 row++; // add one to row, the first needs to be 1, then 2...3...4
-                output += "\t";   //append to the String output 1 -> 1 \n 1 2 -> 1 \n 1 2 \n 1 2 3
-                i = i*row; //assign i the new multiplied value (1*1, 2*2 , 3*3 : append to Output in between each iteration)
-                
-                
+                multi = i*row; //assign 'multi' the new multiplied value of this iteration (1*1, 2*2 , 3*3 
+                                        //  append to Output in between each iteration)
+                System.out.print(i); // new line...
+                output += "\n"; 
+                output += multi; //append to output, the current i values
+                output += "\t";   //append Tab 
             } //end while for Rows
-        
-        System.out.println(output);
             
+            System.out.print(output); 
+            System.out.print("\t"); 
             
-        } while (row < N); //end Do While
+        } while (i < N); //end Do-While
         
         
-    }
-}
+    } // end  main
+}// end class

@@ -20,6 +20,7 @@ public class ForLoop_examples3x {
         
         if(n <= 0){
             JOptionPane.showMessageDialog(null, "your number must be greater than 0");}
+        // end 'stupid User' handler, please don't reproduce
         
         for (i = 1; i <= n;  i++){
             
