@@ -6,6 +6,10 @@ import javax.swing.JOptionPane;
  *
  * @author K00223361
  * Exercise 3. Loop Exercises
+ * 1
+ * 12 
+ * 123
+ * 1234
  */
 public class Loop3 {
     

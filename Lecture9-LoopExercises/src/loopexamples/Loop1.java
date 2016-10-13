@@ -5,6 +5,7 @@ package loopexamples;
 /**
  *
  * @author DragonDream
+ * ex 1: numbers from 1 to 100 in rows of ten values
  */
 public class Loop1 {
 

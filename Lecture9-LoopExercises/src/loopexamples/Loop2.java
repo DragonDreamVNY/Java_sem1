@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
  *
  * @author DragonDream
  * Exercise 2 Loop examples
+ * print the numbers from 1 – N in rows of eight elements.
  */
 public class Loop2 {
 
