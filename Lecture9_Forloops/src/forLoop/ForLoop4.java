@@ -22,11 +22,13 @@ public class ForLoop4 {
             output += col + "\t";
         } // end loop COLUMNS
         
+        output += "\n";
+        
         // Loop 2
-        for (row = 0; row < 10; row++){
+        for (row = 1; row < 10; row++){
             output += row + "\t|\t";
             
-            for (j = 1; j < 10; j++){ // within first loop execute this 9 times
+            for (j = 1; j < 10; j++) { // within first loop execute this 9 times
                 i = row*j ;
                 
                 output += i + "\t";

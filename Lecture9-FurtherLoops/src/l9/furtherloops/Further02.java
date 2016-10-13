@@ -30,7 +30,7 @@ public class Further02 {
              sum = (n + m); // result is a fibonacci number (3rd value)  ie [1+2 =3], [2+3 = 5], [3+5 = 8] ...contd
              n = m; // last time's 2nd number becomes next time's 1st number , remember assigned TO THE LEFT
              m = sum; //last time's result number becomes next time's 2nd number
-            // 
+             
             if (sum % 2 ==0){
                 even += sum; // this is to filter out  sum of only Evens
                 
