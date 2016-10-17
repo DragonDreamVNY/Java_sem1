@@ -52,6 +52,8 @@ public class Arrays03 {
         array1 = array2; // first array gets overwritten with the values from the second
         array2 = temp; 
        
+        // note: use Arrays.toString( ) otherwise it prints only memory location of the array. 
+        // normal 'System.print works within loops where the individual "i" index refers to its stored Value...
         JOptionPane.showMessageDialog(null,
                                                                 ("\n First Array : " +  Arrays.toString(array1)  + 
                                                                         "\n Second  Array : " + Arrays.toString(array2)), 
