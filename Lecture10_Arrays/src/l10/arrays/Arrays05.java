@@ -1,5 +1,6 @@
 
 package l10.arrays;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +17,6 @@ public class Arrays05 {
         
         
         
-    }
-    
-}
+        
+    } // end main
+} // end class

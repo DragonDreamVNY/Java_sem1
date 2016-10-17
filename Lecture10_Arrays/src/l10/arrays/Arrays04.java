@@ -23,21 +23,25 @@ class Arrays04 {
         int array1 [] = new int[100]; // 100 elements in this array
         int randomNum = array1[0];  //randomNum will be over written by array in the For Loop
         
-        int large = 0; //comparison, starts at the lowest       
-        int small = 0; 
+        //generate 100 random numbers
+        for (int i = 0; i < array1.length; i++) {
+            randomNum = ThreadLocalRandom.current().nextInt(min, MAX +1);  //note: could have left out randomNum, and just only used array1[]
+            array1[i] = randomNum;  //array now has values being assigned..
+            System.out.print(randomNum + ", "); //print out each element in array
+        }
+        
+        int large = array1[0]; //comparison, starts at the lowest index    
+        int small = array1[0]; 
         small = randomNum; // assume first entered number is small
         
-        String out = "";
         int sum = 0;
+        double average;
         
         int count7 = 0; //counter for number '7'
         
-        //generate 100 random numbers
-        for (int i = 0; i < 100; i++) {
-            randomNum = ThreadLocalRandom.current().nextInt(min, MAX +1); 
-            array1[i] = randomNum;  //array now has values being assigned..
-            System.out.print(randomNum + ", ");
-            
+        
+        for (int i = 0; i < array1.length; i++) { 
+        
         // largest number is...
             // if the value of this Index is bigger than the last largest
             if (array1[i] > large){
@@ -67,13 +71,18 @@ class Arrays04 {
                 count7++;
             //end if for 3rd digit
             
+            /*
+            could have just used if (array1[i] ==7) {   count7++; }
+            */
         } // end Loop
+        
         
         System.out.println("\n The Largest number is : " + large);
         System.out.println("\n The Smallest number is : " + small);
         System.out.println("\n The Sum of all numbers is : " + sum);
         //average of the 100 numbers in array
-        System.out.println("\n The average of all numbers is : " + (sum)/100);
+        average = (double)sum/array1.length;
+        System.out.println("\n The average of all numbers is : " + average);
          
         // frequency of number 7 in the random number array
         System.out.println("\n The number of times 7 appears : " + count7);
