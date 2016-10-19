@@ -11,23 +11,29 @@ public class Ex01_2DArrays {
 
     public static void main(String[] args) {
         
-        int matrix[][] = new int[3][4];
+        final int ROWS = 3;
+        final int COLS = 4;
+        int largest = 0; //large and small Variables for comparing/holding
+        int smallest = 0;
+        
+        int matrix[][] = new int[3][4]; //2D array with 3 rows and 4 cols. 
         Random rand = new Random();
-        // generate Random numbers and populate array  in range 0..110
+        
+        // generate Random numbers and populate array/matrix  in range 0..110
         for (int r = 0 ; r < matrix.length; r++){ //rows 0, 1, 2
             for (int c = 0; c < 4; c++){ //columns 0, 1, 2, 3
-                matrix [r][c] = rand.nextInt(111); //populate the matrix array with random values in range {0..110}
-                System.out.print( matrix [r][c] + " "); //print each element in the Row...
+                matrix [r][c] = rand.nextInt(110 + 1); //populate the matrix array with random values in range {0..110}
             } // end column For
-           
-            System.out.println(""); //new line for each Row
         } //end row For
         
-        int largest = matrix[0][0]; //large and small Variables for comparing/holding
-        int smallest = matrix[0][0];
-
-        String outLarge = "";
-        String outSmall = "";
+        // print array/matrix
+        System.out.println("Values in matrix are : ");
+        for (int r = 0; r < matrix.length; r++) { //could also use final ROWS instead of matrix.length to be safe...
+            for (int c = 0; c < COLS; c++) {
+                System.out.print(matrix[r][c] + "\t");
+            }
+            System.out.println(""); //new line for each Row
+        }
         
         for (int r = 0; r < matrix.length; r++){ //row
             largest = 0;
@@ -45,7 +51,7 @@ public class Ex01_2DArrays {
                     smallest = matrix[r][c];
                 }
             } // end Matrix column For    
-            System.out.println("The largest number on Row " + r  + " is " + largest);
+            System.out.println("\nThe largest number on Row " + r  + " is " + largest);
             System.out.println("The smallest number on Row " + r  + " is " + smallest);
         } //end Matrix row For
         
