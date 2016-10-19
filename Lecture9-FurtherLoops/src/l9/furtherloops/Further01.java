@@ -4,6 +4,7 @@ package l9.furtherloops;
  *
  * @author DragonDream
  * problem 1 - Further Loops featuring Feckin MATHS
+ * Sum of all Multiples of 3 and 5 inclusive
  */
 public class Further01 {
 
@@ -17,7 +18,7 @@ public class Further01 {
         //multiples of 3 OR 5 
         do{
             N++; 
-                if( (N % 3 == 0) || (N % 5 ==0) ){
+                if( (N % 3 == 0) || (N % 5 == 0) ){
                     // System.out.print(N + ", "); //testing
                     addMe += N; //add this value of N to SumTotal... 
                     

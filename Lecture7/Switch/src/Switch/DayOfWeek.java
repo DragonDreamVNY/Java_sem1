@@ -10,7 +10,7 @@ public class DayOfWeek {
          d = Integer.parseInt(input);
         
          // check if number is  Integer between 1-7, then check number against Switch Cases        
-         if ( (d > 0) && (d < 8)) {
+         if ( (d > 0) && (d < 8) ) {
              
              
             switch (d){

@@ -5,6 +5,10 @@ import javax.swing.JOptionPane;
  *
  * @author DragonDream
  * exercise 3 - ForLoop version
+ * 1
+ * 1 2
+ * 1 2 3
+ * 1 2 3 4
  */
 public class ForLoop_examples3x {
 
@@ -19,8 +23,8 @@ public class ForLoop_examples3x {
         n = Integer.parseInt(input);
         
         if(n <= 0){
-            JOptionPane.showMessageDialog(null, "your number must be greater than 0");}
-        // end 'stupid User' handler, please don't reproduce
+            JOptionPane.showMessageDialog(null, "your number must be greater than 0");
+        }// end 'stupid User' handler, please don't reproduce
         
         for (i = 1; i <= n;  i++){
             

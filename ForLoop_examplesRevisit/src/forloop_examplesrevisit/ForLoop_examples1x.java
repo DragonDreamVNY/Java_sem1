@@ -5,7 +5,10 @@ package forloop_examplesrevisit;
  *
  * @author DragonDream
  * exercise 1
+ * 100 numbers
+ * new row every 10 values
  */
+
 public class ForLoop_examples1x {
 
 
