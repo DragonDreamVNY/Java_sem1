@@ -5,8 +5,9 @@
  */
 package l11;
 
+import java.util.Arrays;
 import javax.swing.JOptionPane;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 /**
  *
  * @author DragonDream
@@ -22,32 +23,58 @@ public class Ex2_2DArrays {
     
     public static void main(String[] args) {
         int array[][] = new int[20][10]; //20 rows, 10 columns
-        Random rand = new Random ();
+        int randomNum;
+        
         int rows = 20;
         int cols = 10;
         int min = 0;
-        int max = 29;
-        boolean usedNum[][] = new boolean[20][10]; //compare used numbers to this array
+        int max = 30;
+        boolean usedNum[] = new boolean[31]; //compare used numbers to this array
+        int occurence = 0;
         
         // fill array with random numbers
         for (int r = 0; r < array.length; r++){ // rows 0,1,2..19
             for (int c = 0; c<10; c++){ // columns 0,1,2..9
-                array[r][c] = rand.nextInt(30 + 1); //populate the matrix array with random values in range {0..30}
-                System.out.print( array[r][c] + "\t"); //print each element in the Row ...
+                
+                do {
+                randomNum = ThreadLocalRandom.current().nextInt(min, max + 1); //populate the matrix array with random values in range {0..30}
+                } while(usedNum[randomNum] == true ); //
+                
+                //Put the random number into the array at row i and col j
+                array[r][c] = randomNum;
+                
+                //Set element randomNum in the usedNumbers array to ' true '
+                //This indicates that this number has been used/generated in this row
+                usedNum[randomNum] = true;
+                
+                
             } //end column FOR
-            System.out.println(""); //new line for each Row
+             Arrays.fill(usedNum, false); //after filling Row in array, sets all Array elements to False       
         } // end row FOR
-        
+ 
         // print the array
         for(int r = 0; r < array.length; r++){
             for (int c = 0; c<10; c++){
                 System.out.print( array[r][c] + "\t"); //print each element in the Row ...
-            }
+            } // end For Columns
             System.out.println(""); //new line for each Row
         
-        }
+        } //end For Row
             
-            
+        
+       // number of times 7 and 8 occur sequentially
+       for (int r = 0; r < array.length; r++){
+           for(int c = 0; c < cols; c++){
+                 if (c == cols-1){ break; }  //break out of loop if reach end of a given row (column length)   
+                //check if 7 and 8 occur sequentially in a row
+                if ((array[r][c] == 7 && array[r][c+1]==8)) { 
+                    occurence++; 
+                } //end if occurence
+                 
+            } // end for COLS 
+         } //end For Rows
+        System.out.println("\nThe number of times 7 & 8 occur sequentially in a row in this array is " + occurence);
+
     } //end main
     
 } //end class
