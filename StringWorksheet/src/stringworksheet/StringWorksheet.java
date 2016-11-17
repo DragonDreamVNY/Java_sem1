@@ -15,6 +15,7 @@ public class StringWorksheet {
         String s3 = "You have to do your own growing no matter how tall your grandfather was"; 
         String s4 = "A stitch in time saves nine";
         String s5 = "Happy days are here again";
+        
         /*------------------------
         //TASK 1. Does S1 and S2 have same content?
         ------------------------*/
@@ -93,7 +94,40 @@ public class StringWorksheet {
         ------------------------*/
         String replaced1 = s4.replace('t', '!');
         String replaced2 = replaced1.replace('s', '#');
+        System.out.println(replaced2);    
+        
+        /*------------------------
+        //TASK 7.    Prints the index of each occurrence of the letter 'a' in s5.
+        ------------------------*/
+        s5 = s5.toLowerCase();
+        for (int i = 0; i < s5.length(); i++ ){
             
+            if( s5.charAt(i) == 'a') {
+               System.out.println("\'a\' occurs at index : " + i); //print the index where 'a' occurs
+            }//end if
+            
+        }//end For
+        System.out.println("");
+        
+         /*------------------------
+        //TASK 8.   Print each letter in the String s5 on a separate line.
+        ------------------------*/
+        for (int i = 0; i < s5.length(); i++ ){
+            
+            System.out.println(s5.charAt(i)); //print the char at this index  
+        }//end For
+        
+         /*------------------------
+        //TASK 9.   Extract the word 'days' from s5.
+        ------------------------*/
+         System.out.println( s5.subSequence(6, 10) );
+         
+         /*------------------------
+        //TASK 10.   Find the last index of 'a' in the s5
+        ------------------------*/
+        System.out.println(s5.lastIndexOf( 'a') );
+         
+         
     }//end main method
     
 } // end class
