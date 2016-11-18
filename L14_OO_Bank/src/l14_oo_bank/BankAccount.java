@@ -94,7 +94,24 @@ public class BankAccount {
         balance = bal; 
    } // end constructor
      
-   /* debit method*/
-     
+   /* debit method */
+     public double Debit(double debitAmount){
+         balance = balance + debitAmount;
+         return balance;
+     }
     
+     /* credit method */
+     public double Credit(double creditAmount){
+         balance = balance - creditAmount;
+         return balance;
+     }
+     
+     /* transfer */
+     public void Transfer(int amount, BankAccount ba){ //passing object instance in
+        this.balance = this.balance - amount; //this refers to Object Instance
+        ba.balance = ba.balance + amount; //see this is the balance of the Object Parameter passed in
+        //no return here, because "which balance do you return?" therefore void
+     }
+     
+     
 } //end Class

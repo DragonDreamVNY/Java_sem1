@@ -30,12 +30,26 @@ public class Accounts {
         /*4*/ JohnAccount.setName("John McBride");
         /*5*/ MaryAccount.setName("Mary O' Connor");
         /*6*/ LisaAccount.setName("Lisa Ahern");
-        /*7*/ ShaneAccount.setName("John Moroney");
+        /*7*/ ShaneAccount.setName("Shane Moroney");
         /*8*/ System.out.println(JohnAccount.toString() + "\n"
                                 + LisaAccount.toString() + "\n"
                                 + MaryAccount.toString() + "\n"
                                 + ShaneAccount.toString());
         
+        /*9*/ JohnAccount.Debit(200);   
+        /*10*/ ShaneAccount.Credit(150);
+        //System.out.println(ShaneAccount.toString());
+        /*11*/ JohnAccount.Debit(100);
+        /*12*/ MaryAccount.Credit(1000);
+        /*13*/ LisaAccount.Debit(150);
+        
+        /*14*/ LisaAccount.Transfer(150, MaryAccount);
+        /*15*/ ShaneAccount.Transfer(1000, JohnAccount);
+        
+        /*16*/ System.out.println("\n" + JohnAccount.toString() + "\n"
+                                + LisaAccount.toString() + "\n"
+                                + MaryAccount.toString() + "\n"
+                                + ShaneAccount.toString());
     } // end Main method
     
 } // end BankAccount class
