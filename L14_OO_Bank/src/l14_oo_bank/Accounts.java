@@ -16,7 +16,7 @@ public class Accounts {
 
         BankAccount ShaneAccount = new BankAccount(1933.24); //uses default constructor with single arg
       
-        /*initialise Shane's Account */
+        /*initialise Shane's Account using Setters */
         ShaneAccount.setName("Shane");
         ShaneAccount.setAddress("Dublin");
         ShaneAccount.setnumber(895623);

@@ -11,32 +11,6 @@ public class BankAccount {
     private String openingDate;
     private double balance;
     
-    
-    /*--- get ---*/
-    public String getName(){
-        return name;
-    }
-    
-    public String getAddress(){
-        return address;
-    }
-    
-    public int getnumber(){
-        return number;
-    }
-    
-    public String getSortCode(){
-        return sortCode;
-    }
-    
-    public String getOpeningDate(){
-        return openingDate;
-    }
-    
-    public double getBalance(){
-        return balance;
-    }
-    
     /*--- set ---*/
     public void setName(String newName){
         this.name = newName;
@@ -68,14 +42,49 @@ public class BankAccount {
         return outString;
     }
     
+    /*
+    @Override // to do with Inheritance issue
+    public String toString(){
+        return String.format("&-20s%-10s%8.2f", this.getName(), this.getAddress(), this.getBalance();
+    }
+    //if less than 20 characters, puts 8.8 spaces (floating point)  before decimal
+    // in main, String method is passed automatically on object when passed into SystemPrint.
+    // System.out.orintln(JohnAccount);
+    */
+    
+     /*--- get ---*/
+    public String getName(){
+        return name;
+    }
+    
+    public String getAddress(){
+        return address;
+    }
+    
+    public int getnumber(){
+        return number;
+    }
+    
+    public String getSortCode(){
+        return sortCode;
+    }
+    
+    public String getOpeningDate(){
+        return openingDate;
+    }
+    
+    public double getBalance(){
+        return balance;
+    }
+    
     /*1 default constructor*/
     public BankAccount(){
-        name = "";
-        address = "";
-        number = 0;
-        sortCode = "";
-        openingDate = "";
-        balance = 0;
+        this.name = "";
+        this.address = "";
+        this.number = 0;
+        this.sortCode = "";
+        this.openingDate = "";
+        this.balance = 0;
    }//with default values for new object instances
     
     
@@ -96,22 +105,31 @@ public class BankAccount {
      
    /* debit method */
      public double Debit(double debitAmount){
-         balance = balance + debitAmount;
-         return balance;
+         this.balance = balance + debitAmount;
+         return this.balance;
      }
     
      /* credit method */
      public double Credit(double creditAmount){
-         balance = balance - creditAmount;
-         return balance;
+         this.balance = balance - creditAmount;
+         return this.balance;
      }
      
      /* transfer */
-     public void Transfer(int amount, BankAccount ba){ //passing object instance in
-        this.balance = this.balance - amount; //this refers to Object Instance
-        ba.balance = ba.balance + amount; //see this is the balance of the Object Parameter passed in
+     /*
+     public void Transfer(double amount, BankAccount transferAccount){ //pass in 2 params: amount and passed in object instance 
+        this.balance = this.balance - amount; //this refers to current Object Instance
+        transferAccount.balance = transferAccount.balance + amount; //see this is the balance of the Object Parameter passed in
         //no return here, because "which balance do you return?" therefore void
+        // alternative, see below to call the Debit and Credit methods
      }
+     */
+     
+     public double Transfer(double amount, BankAccount transferAccount){
+        transferAccount.Credit(amount);
+        return this.Debit(amount);
+     }
+     
      
      
 } //end Class
