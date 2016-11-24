@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="sizeButtonGroup">
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="Size">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="displayMenuItem">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Display"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="clearText">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+C"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Clear Text"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearTextActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="setColor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Text Color"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="setButtonColor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Button Color"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuFormat">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Format"/>
+          </Properties>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="styleMenu">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Style"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem1">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="Bold"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem2">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="Italic"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="sizeMenu">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Size"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="size12">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="sizeButtonGroup"/>
+                    </Property>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="12"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="size16">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="sizeButtonGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="16"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JRadioButtonMenuItem" name="size20">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="sizeButtonGroup"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="20"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="Size"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tildeButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="oneButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="twoButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="threeButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fourButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fiveButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sixButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sevenButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="eightButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="nineButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="zeroButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="minusButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="plusButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="backspaceButton" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="tabButton" min="-2" pref="115" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="qButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="wButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="eButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="yButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="uButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="iButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="oButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="leftsquarebracketButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rightsquarebracketButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="backslashButton" min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="capsButton" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="aButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="dButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="gButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="hButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="kButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lButton" linkSize="1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="colonButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="quoteButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="enterButton" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="180" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="shiftButton" min="-2" pref="142" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="zButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="xButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="cButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="vButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="bButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="nButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="mButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="spacebarButton" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="commaButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Component id="periodButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="questionButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="leftarrowButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="uparrowButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="downarrowButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="rigtharrowButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="107" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="oneButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="tildeButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="twoButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="threeButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="fourButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="fiveButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="sixButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="sevenButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="eightButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="nineButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="zeroButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="minusButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="plusButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="backspaceButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="qButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="tabButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="wButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="eButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="rButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="tButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="yButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="uButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="iButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="oButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="pButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="leftsquarebracketButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="rightsquarebracketButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="backslashButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="aButton" linkSize="2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="capsButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="sButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="dButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="fButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="gButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="hButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="jButton" linkSize="2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="kButton" linkSize="2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="lButton" linkSize="2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="colonButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="quoteButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="enterButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="shiftButton" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="cButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="vButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="bButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="nButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="periodButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="questionButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="uparrowButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="commaButton" alignment="0" pref="45" max="32767" attributes="0"/>
+                              <Component id="mButton" alignment="0" pref="45" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="downarrowButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="leftarrowButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="rigtharrowButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="spacebarButton" min="-2" pref="44" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="zButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="xButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="64" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jta">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtaKeyPressed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtaKeyReleased"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="tildeButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="~"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tildeButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="oneButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oneButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="twoButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="threeButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="fourButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="fiveButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="sixButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="sevenButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="7"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sevenButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="eightButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="nineButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="zeroButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="minusButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="plusButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="+"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="backspaceButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BACKSPACE"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backspaceButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="qButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Q"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="wButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="W"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="eButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="rButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="R"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="tButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="T"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="yButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Y"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="uButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="U"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="iButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="I"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="oButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="O"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="pButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="P"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="leftsquarebracketButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="["/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="rightsquarebracketButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="]"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="capsButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Caps"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="capsButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="aButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="sButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="dButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="fButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="F"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="gButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="G"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="hButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="H"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="J"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="kButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="K"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="lButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="L"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="tabButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tab"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tabButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="backslashButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="\u005c" containsInvalidXMLChars="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="colonButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=":"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="quoteButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&quot;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quoteButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="enterButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ENTER"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enterButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="shiftButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Shift"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="shiftButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="zButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Z"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="xButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="cButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="vButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="V"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="B"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="nButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="mButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="commaButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=","/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="periodButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="questionButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="?"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="questionButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="leftarrowButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x25c4;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="uparrowButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x25b2;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uparrowButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="rigtharrowButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x25ba; "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rigtharrowButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="downarrowButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x25bc;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="downarrowButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="spacebarButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="space"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
