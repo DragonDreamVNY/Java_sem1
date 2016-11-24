@@ -1,3 +1,5 @@
+package virtualkeyboard;
+
 
 import java.awt.Color;
 import java.awt.event.KeyEvent;
@@ -87,6 +89,7 @@ public class Keyboard extends javax.swing.JFrame {
         /*row 5*/
         keyJButtons[KeyEvent.VK_SPACE] = spacebarButton;
         keyJButtons[KeyEvent.VK_LEFT] = leftarrowButton;
+        keyJButtons[KeyEvent.VK_DOWN] = downarrowButton;
         keyJButtons[KeyEvent.VK_RIGHT] = rigtharrowButton;
     }
 
@@ -394,8 +397,8 @@ public class Keyboard extends javax.swing.JFrame {
 
             displayMenuItem.setText("Display");
 
-            clearText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
-            clearText.setText("Clear Text");
+            clearText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+            clearText.setLabel("<html><u>C</u>lear Text</html>");
             clearText.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     clearTextActionPerformed(evt);
@@ -404,10 +407,17 @@ public class Keyboard extends javax.swing.JFrame {
             displayMenuItem.add(clearText);
             displayMenuItem.add(jSeparator1);
 
-            setColor.setText("Text Color");
+            setColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
+            setColor.setText("<html>Text Co<u>l</u>or...</html>");
+            setColor.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    setColorActionPerformed(evt);
+                }
+            });
             displayMenuItem.add(setColor);
 
-            setButtonColor.setText("Button Color");
+            setButtonColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK));
+            setButtonColor.setText("<html><u>B</u>utton Color...</html>");
             displayMenuItem.add(setButtonColor);
 
             Size.add(displayMenuItem);
@@ -416,11 +426,9 @@ public class Keyboard extends javax.swing.JFrame {
 
             styleMenu.setText("Style");
 
-            jCheckBoxMenuItem1.setSelected(true);
             jCheckBoxMenuItem1.setText("Bold");
             styleMenu.add(jCheckBoxMenuItem1);
 
-            jCheckBoxMenuItem2.setSelected(true);
             jCheckBoxMenuItem2.setText("Italic");
             styleMenu.add(jCheckBoxMenuItem2);
 
@@ -773,6 +781,10 @@ public class Keyboard extends javax.swing.JFrame {
     private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lButtonActionPerformed
+
+    private void setColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_setColorActionPerformed
 
     /**
      * @param args the command line arguments

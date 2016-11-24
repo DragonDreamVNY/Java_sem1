@@ -14,9 +14,9 @@
             <MenuItem class="javax.swing.JMenuItem" name="clearText">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+C"/>
+                  <KeyStroke key="Alt+C"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Clear Text"/>
+                <Property name="label" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;C&lt;/u&gt;lear Text&lt;/html&gt;"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearTextActionPerformed"/>
@@ -26,12 +26,21 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="setColor">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Text Color"/>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+L"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Text Co&lt;u&gt;l&lt;/u&gt;or...&lt;/html&gt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="setColorActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="setButtonColor">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Button Color"/>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+B"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;B&lt;/u&gt;utton Color...&lt;/html&gt;"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -48,13 +57,11 @@
               <SubComponents>
                 <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem1">
                   <Properties>
-                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Bold"/>
                   </Properties>
                 </MenuItem>
                 <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem2">
                   <Properties>
-                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Italic"/>
                   </Properties>
                 </MenuItem>
