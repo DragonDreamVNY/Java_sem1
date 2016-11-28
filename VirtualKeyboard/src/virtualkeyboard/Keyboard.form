@@ -14,7 +14,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="clearText">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+C"/>
+                  <KeyStroke key="Shift+Ctrl+C"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;C&lt;/u&gt;lear Text&lt;/html&gt;"/>
               </Properties>
@@ -27,7 +27,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="setColor">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+L"/>
+                  <KeyStroke key="Ctrl+L"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Text Co&lt;u&gt;l&lt;/u&gt;or...&lt;/html&gt;"/>
               </Properties>
@@ -38,7 +38,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="setButtonColor">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+B"/>
+                  <KeyStroke key="Ctrl+B"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;B&lt;/u&gt;utton Color...&lt;/html&gt;"/>
               </Properties>
@@ -224,11 +224,23 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="shiftButton" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="ctrlButton" min="-2" pref="66" max="-2" attributes="0"/>
+                                  <Component id="shiftButton" min="-2" pref="142" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="zButton" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="xButton" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="zButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="xButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="optionButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="altButton" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
@@ -369,14 +381,19 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="spacebarButton" min="-2" pref="44" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="spacebarButton" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="altButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="optionButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="ctrlButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Component id="zButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                   <Component id="xButton" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -738,7 +755,38 @@
     <Component class="javax.swing.JButton" name="spacebarButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="space"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="altButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ALT"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="altButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="ctrlButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="10" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="CTRL"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ctrlButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="optionButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="OPT"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="optionButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -87,6 +87,8 @@ public class Keyboard extends javax.swing.JFrame {
         keyJButtons[KeyEvent.VK_PERIOD] = periodButton;
         keyJButtons[KeyEvent.VK_UP] = uparrowButton;
         /*row 5*/
+        keyJButtons[KeyEvent.VK_CONTROL] = ctrlButton;
+        keyJButtons[KeyEvent.VK_ALT] = altButton;
         keyJButtons[KeyEvent.VK_SPACE] = spacebarButton;
         keyJButtons[KeyEvent.VK_LEFT] = leftarrowButton;
         keyJButtons[KeyEvent.VK_DOWN] = downarrowButton;
@@ -162,6 +164,9 @@ public class Keyboard extends javax.swing.JFrame {
         rigtharrowButton = new javax.swing.JButton();
         downarrowButton = new javax.swing.JButton();
         spacebarButton = new javax.swing.JButton();
+        altButton = new javax.swing.JButton();
+        ctrlButton = new javax.swing.JButton();
+        optionButton = new javax.swing.JButton();
         Size = new javax.swing.JMenuBar();
         displayMenuItem = new javax.swing.JMenu();
         clearText = new javax.swing.JMenuItem();
@@ -394,10 +399,36 @@ public class Keyboard extends javax.swing.JFrame {
             });
 
             spacebarButton.setText("space");
+            spacebarButton.setAlignmentY(0.0F);
+
+            altButton.setText("ALT");
+            altButton.setAlignmentY(0.0F);
+            altButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    altButtonActionPerformed(evt);
+                }
+            });
+
+            ctrlButton.setFont(new java.awt.Font("Lucida Grande", 1, 10)); // NOI18N
+            ctrlButton.setText("CTRL");
+            ctrlButton.setAlignmentY(0.0F);
+            ctrlButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    ctrlButtonActionPerformed(evt);
+                }
+            });
+
+            optionButton.setText("OPT");
+            optionButton.setAlignmentY(0.0F);
+            optionButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    optionButtonActionPerformed(evt);
+                }
+            });
 
             displayMenuItem.setText("Display");
 
-            clearText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+            clearText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
             clearText.setLabel("<html><u>C</u>lear Text</html>");
             clearText.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -407,7 +438,7 @@ public class Keyboard extends javax.swing.JFrame {
             displayMenuItem.add(clearText);
             displayMenuItem.add(jSeparator1);
 
-            setColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
+            setColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
             setColor.setText("<html>Text Co<u>l</u>or...</html>");
             setColor.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -416,7 +447,7 @@ public class Keyboard extends javax.swing.JFrame {
             });
             displayMenuItem.add(setColor);
 
-            setButtonColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK));
+            setButtonColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
             setButtonColor.setText("<html><u>B</u>utton Color...</html>");
             displayMenuItem.add(setButtonColor);
 
@@ -551,11 +582,19 @@ public class Keyboard extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jScrollPane1)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(shiftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(ctrlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(shiftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(zButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(xButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(zButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(xButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(optionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(altButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(layout.createSequentialGroup()
@@ -674,10 +713,14 @@ public class Keyboard extends javax.swing.JFrame {
                                         .addComponent(rigtharrowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(spacebarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(spacebarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(altButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(optionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ctrlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addComponent(zButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(xButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(64, Short.MAX_VALUE))
+                    .addContainerGap(62, Short.MAX_VALUE))
             );
 
             layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, dButton, fButton, gButton, hButton, jButton, kButton, lButton, sButton});
@@ -719,7 +762,7 @@ public class Keyboard extends javax.swing.JFrame {
     }//GEN-LAST:event_dButtonActionPerformed
 
     private void clearTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearTextActionPerformed
-        // TODO add your handling code here:
+        jta.setText(null);
     }//GEN-LAST:event_clearTextActionPerformed
 
     private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
@@ -786,6 +829,18 @@ public class Keyboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_setColorActionPerformed
 
+    private void altButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_altButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_altButtonActionPerformed
+
+    private void ctrlButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctrlButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ctrlButtonActionPerformed
+
+    private void optionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_optionButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -824,6 +879,7 @@ public class Keyboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Size;
     private javax.swing.JButton aButton;
+    private javax.swing.JButton altButton;
     private javax.swing.JButton bButton;
     private javax.swing.JButton backslashButton;
     private javax.swing.JButton backspaceButton;
@@ -832,6 +888,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JMenuItem clearText;
     private javax.swing.JButton colonButton;
     private javax.swing.JButton commaButton;
+    private javax.swing.JButton ctrlButton;
     private javax.swing.JButton dButton;
     private javax.swing.JMenu displayMenuItem;
     private javax.swing.JButton downarrowButton;
@@ -861,6 +918,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton nineButton;
     private javax.swing.JButton oButton;
     private javax.swing.JButton oneButton;
+    private javax.swing.JButton optionButton;
     private javax.swing.JButton pButton;
     private javax.swing.JButton periodButton;
     private javax.swing.JButton plusButton;
