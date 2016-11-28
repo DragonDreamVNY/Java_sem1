@@ -90,6 +90,7 @@ public class Keyboard extends javax.swing.JFrame {
         keyJButtons[KeyEvent.VK_COMMA] = commaButton;
         keyJButtons[KeyEvent.VK_PERIOD] = periodButton;
         keyJButtons[KeyEvent.VK_UP] = uparrowButton;
+        keyJButtons[KeyEvent.VK_SLASH] = questionButton;
         /*row 5*/
         keyJButtons[KeyEvent.VK_CONTROL] = ctrlButton;
         keyJButtons[KeyEvent.VK_ALT] = altButton;
