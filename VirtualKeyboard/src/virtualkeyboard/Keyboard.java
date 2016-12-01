@@ -29,8 +29,14 @@ public class Keyboard extends javax.swing.JFrame {
      */
     Color buttonColor = Color.RED; // holder for button colour
     Color textColor = Color.BLACK; //holder for text colour
+    int fontSize = 12;
+    int style;
+//    int fontStyle = true;
+    
+    
     public Keyboard() {
         initComponents();
+        
         /*row 1*/
         keyJButtons[KeyEvent.VK_DEAD_TILDE] = tildeButton;
         keyJButtons[KeyEvent.VK_1] = oneButton;
@@ -98,6 +104,8 @@ public class Keyboard extends javax.swing.JFrame {
         keyJButtons[KeyEvent.VK_DOWN] = downarrowButton;
         keyJButtons[KeyEvent.VK_RIGHT] = rigtharrowButton;
         keyJButtons[KeyEvent.VK_SLASH] = questionButton;
+        menuFormat.setMnemonic(KeyEvent.VK_F);
+        
     }
 
     /**
@@ -172,16 +180,18 @@ public class Keyboard extends javax.swing.JFrame {
         altButton = new javax.swing.JButton();
         ctrlButton = new javax.swing.JButton();
         optionButton = new javax.swing.JButton();
+        saveButton = new javax.swing.JButton();
         Size = new javax.swing.JMenuBar();
         displayMenuItem = new javax.swing.JMenu();
         clearText = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         setColor = new javax.swing.JMenuItem();
         setButtonColor = new javax.swing.JMenuItem();
+        saveItem = new javax.swing.JMenuItem();
         menuFormat = new javax.swing.JMenu();
         styleMenu = new javax.swing.JMenu();
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        boldStyle = new javax.swing.JCheckBoxMenuItem();
+        italicStyle = new javax.swing.JCheckBoxMenuItem();
         sizeMenu = new javax.swing.JMenu();
         size12 = new javax.swing.JRadioButtonMenuItem();
         size16 = new javax.swing.JRadioButtonMenuItem();
@@ -433,6 +443,13 @@ public class Keyboard extends javax.swing.JFrame {
                 }
             });
 
+            saveButton.setText("SAVE File");
+            saveButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    saveButtonActionPerformed(evt);
+                }
+            });
+
             displayMenuItem.setText("Display");
 
             clearText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
@@ -463,27 +480,31 @@ public class Keyboard extends javax.swing.JFrame {
             });
             displayMenuItem.add(setButtonColor);
 
+            saveItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+            saveItem.setText("Save File");
+            displayMenuItem.add(saveItem);
+
             Size.add(displayMenuItem);
 
             menuFormat.setText("Format");
 
             styleMenu.setText("Style");
 
-            jCheckBoxMenuItem1.setText("Bold");
-            jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            boldStyle.setText("Bold");
+            boldStyle.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jCheckBoxMenuItem1ActionPerformed(evt);
+                    boldStyleActionPerformed(evt);
                 }
             });
-            styleMenu.add(jCheckBoxMenuItem1);
+            styleMenu.add(boldStyle);
 
-            jCheckBoxMenuItem2.setText("Italic");
-            jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            italicStyle.setText("Italic");
+            italicStyle.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jCheckBoxMenuItem2ActionPerformed(evt);
+                    italicStyleActionPerformed(evt);
                 }
             });
-            styleMenu.add(jCheckBoxMenuItem2);
+            styleMenu.add(italicStyle);
 
             menuFormat.add(styleMenu);
 
@@ -501,10 +522,20 @@ public class Keyboard extends javax.swing.JFrame {
 
             sizeButtonGroup.add(size16);
             size16.setText("16");
+            size16.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    size16ActionPerformed(evt);
+                }
+            });
             sizeMenu.add(size16);
 
             sizeButtonGroup.add(size20);
             size20.setText("20");
+            size20.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    size20ActionPerformed(evt);
+                }
+            });
             sizeMenu.add(size20);
 
             menuFormat.add(sizeMenu);
@@ -665,6 +696,10 @@ public class Keyboard extends javax.swing.JFrame {
                                     .addComponent(enterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(0, 0, Short.MAX_VALUE))))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(158, 158, 158)
+                    .addComponent(saveButton)
+                    .addGap(0, 0, Short.MAX_VALUE))
             );
 
             layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aButton, dButton, fButton, gButton, hButton, jButton, kButton, lButton, sButton});
@@ -672,7 +707,9 @@ public class Keyboard extends javax.swing.JFrame {
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(40, 40, 40)
+                    .addContainerGap()
+                    .addComponent(saveButton)
+                    .addGap(5, 5, 5)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -882,17 +919,41 @@ public class Keyboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_optionButtonActionPerformed
 
-    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+    private void boldStyleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boldStyleActionPerformed
         // BOLD
-        Font font = new Font("Times New Roman", Font.BOLD, 16);
-        jta.setFont(font);
-    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+//        Font font = new Font("Times New Roman", Font.BOLD | Font.ITALIC, fontSize);
+//        jta.setFont(font);
+        
+        //jta.setFont(jta.getFont().deriveFont(Font.BOLD | Font.ITALIC));
+        
+        if (boldStyle.isSelected()){
+            if(italicStyle.isSelected()){
+                style = Font.BOLD & Font.ITALIC;
+            } else { style = Font.BOLD; }
+        } 
+        else if(italicStyle.isSelected()){ 
+            style = Font.ITALIC; 
+        } else { style = Font.PLAIN; }
+        Font font = new Font("Times New Roman", style, fontSize);
+        jta.setFont(font); 
+    }//GEN-LAST:event_boldStyleActionPerformed
 
-    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+    private void italicStyleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_italicStyleActionPerformed
         // Italic
-        Font font = new Font("Times New Roman", Font.ITALIC, 16);
-        jta.setFont(font);  
-    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+//        Font font = new Font("Times New Roman", Font.ITALIC, fontSize);
+//        jta.setFont(font);  
+        if (italicStyle.isSelected()){
+            if(boldStyle.isSelected()){
+                style = Font.BOLD & Font.ITALIC;
+            } else { style = Font.ITALIC; }
+        } 
+        else if(boldStyle.isSelected()){ 
+            style = Font.BOLD; 
+        } else { style = Font.PLAIN; }
+        Font font = new Font("Times New Roman", style, fontSize);
+        jta.setFont(font); 
+
+    }//GEN-LAST:event_italicStyleActionPerformed
 
     private void setButtonColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setButtonColorActionPerformed
         // Button Color
@@ -901,21 +962,35 @@ public class Keyboard extends javax.swing.JFrame {
     }//GEN-LAST:event_setButtonColorActionPerformed
 
     private void size12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_size12ActionPerformed
-        // TODO add your handling code here:
+        Font font = new Font("Times New Roman", Font.PLAIN,16);
+        jta.setFont(font);
     }//GEN-LAST:event_size12ActionPerformed
 
     private void verdanaStyleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verdanaStyleMenuItemActionPerformed
-        Font font = new Font("Verdana", Font.BOLD,12);
+        Font font = new Font("Verdana", Font.PLAIN,fontSize);
         jta.setFont(font);
-        //add(jta);
-        
+        //add(jta); 
     }//GEN-LAST:event_verdanaStyleMenuItemActionPerformed
+
+    private void size16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_size16ActionPerformed
+        Font font = new Font("Times New Roman", Font.PLAIN,16);
+        jta.setFont(font);
+    }//GEN-LAST:event_size16ActionPerformed
+
+    private void size20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_size20ActionPerformed
+        Font font = new Font("Times New Roman", Font.PLAIN,20);
+        jta.setFont(font);
+    }//GEN-LAST:event_size20ActionPerformed
+
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -953,6 +1028,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton bButton;
     private javax.swing.JButton backslashButton;
     private javax.swing.JButton backspaceButton;
+    private javax.swing.JCheckBoxMenuItem boldStyle;
     private javax.swing.JButton cButton;
     private javax.swing.JButton capsButton;
     private javax.swing.JMenuItem clearText;
@@ -972,9 +1048,8 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton gButton;
     private javax.swing.JButton hButton;
     private javax.swing.JButton iButton;
+    private javax.swing.JCheckBoxMenuItem italicStyle;
     private javax.swing.JButton jButton;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTextArea jta;
@@ -1000,6 +1075,8 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton rightsquarebracketButton;
     private javax.swing.JButton rigtharrowButton;
     private javax.swing.JButton sButton;
+    private javax.swing.JButton saveButton;
+    private javax.swing.JMenuItem saveItem;
     private javax.swing.JMenuItem setButtonColor;
     private javax.swing.JMenuItem setColor;
     private javax.swing.JButton sevenButton;
