@@ -97,6 +97,7 @@ public class Keyboard extends javax.swing.JFrame {
         keyJButtons[KeyEvent.VK_LEFT] = leftarrowButton;
         keyJButtons[KeyEvent.VK_DOWN] = downarrowButton;
         keyJButtons[KeyEvent.VK_RIGHT] = rigtharrowButton;
+        keyJButtons[KeyEvent.VK_SLASH] = questionButton;
     }
 
     /**
