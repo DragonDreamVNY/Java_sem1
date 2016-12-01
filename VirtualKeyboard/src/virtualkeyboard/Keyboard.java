@@ -186,6 +186,8 @@ public class Keyboard extends javax.swing.JFrame {
         size12 = new javax.swing.JRadioButtonMenuItem();
         size16 = new javax.swing.JRadioButtonMenuItem();
         size20 = new javax.swing.JRadioButtonMenuItem();
+        fontMenu = new javax.swing.JMenu();
+        verdanaStyleMenuItem = new javax.swing.JRadioButtonMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -506,6 +508,19 @@ public class Keyboard extends javax.swing.JFrame {
             sizeMenu.add(size20);
 
             menuFormat.add(sizeMenu);
+
+            fontMenu.setText("Font");
+
+            verdanaStyleMenuItem.setSelected(true);
+            verdanaStyleMenuItem.setText("Verdana");
+            verdanaStyleMenuItem.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    verdanaStyleMenuItemActionPerformed(evt);
+                }
+            });
+            fontMenu.add(verdanaStyleMenuItem);
+
+            menuFormat.add(fontMenu);
 
             Size.add(menuFormat);
 
@@ -889,6 +904,13 @@ public class Keyboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_size12ActionPerformed
 
+    private void verdanaStyleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verdanaStyleMenuItemActionPerformed
+        Font font = new Font("Verdana", Font.BOLD,12);
+        jta.setFont(font);
+        //add(jta);
+        
+    }//GEN-LAST:event_verdanaStyleMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -945,6 +967,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton enterButton;
     private javax.swing.JButton fButton;
     private javax.swing.JButton fiveButton;
+    private javax.swing.JMenu fontMenu;
     private javax.swing.JButton fourButton;
     private javax.swing.JButton gButton;
     private javax.swing.JButton hButton;
@@ -997,6 +1020,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton uButton;
     private javax.swing.JButton uparrowButton;
     private javax.swing.JButton vButton;
+    private javax.swing.JRadioButtonMenuItem verdanaStyleMenuItem;
     private javax.swing.JButton wButton;
     private javax.swing.JButton xButton;
     private javax.swing.JButton yButton;
