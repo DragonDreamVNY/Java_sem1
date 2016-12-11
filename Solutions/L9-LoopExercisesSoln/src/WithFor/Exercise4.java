@@ -8,6 +8,10 @@ public class Exercise4 {
     * Exercise 4
     * Accept a positive number (let’s call it N) from the user and print the first N rows of the following table. 
     * For example the following output assumes that N = 4.
+    1
+    2 4 
+    3 6 9
+    4 8 12 16
     * ------------*/
     public static void main(String[] args) {
           

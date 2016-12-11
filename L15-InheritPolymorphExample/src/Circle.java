@@ -3,21 +3,20 @@
  *
  * @author DragonDream
  */
-public class Circle extends GeometricObject{
+public class Circle{
     
     private double radius;
     
     public Circle(){
-        this (1.0);
+        radius =  1.0;
     }// end default constructor Circle
     
-    public Circle (double radius, String color, boolean filled){
-        super(color, filled);
-        this.radius = radius;
+    public Circle (double r){
+        radius = r;
     } //end constructor Circle (double)
     
     /*-- get --*/
-    public double getRadius(){ return radius; }
+    public double getRadius(){ return this.radius; }
     /*-- set --*/
     public void setRadius(double radius) { this.radius = radius; }
     

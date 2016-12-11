@@ -18,19 +18,18 @@ import javax.swing.JColorChooser;
  * @author k00223361 VINCENT LEE
  */
 public class Keyboard extends javax.swing.JFrame {
-    /*
-    private JButton[] keyJButtons = new JButton [KeyEvent.KEY_LAST +1]; //has value of 402...
-    
-    */
+
+    //private JButton[] keyJButtons = new JButton [KeyEvent.KEY_LAST +1]; //has value of 402...
+
     private JButton[] keyJButtons = new JButton [0xfff]; 
     //KevEvent
     /**
      * Creates new form Keyboard
      */
-    Color buttonColor = Color.RED; // holder for button colour
+    Color buttonColor; // holder for button colour
     Color textColor = Color.BLACK; //holder for text colour
-    int fontSize = 12;
-    int style;
+    int fontSize = 12;//holder for font size
+    int style; //holder for style
 //    int fontStyle = true;
     
     
@@ -180,7 +179,7 @@ public class Keyboard extends javax.swing.JFrame {
         altButton = new javax.swing.JButton();
         ctrlButton = new javax.swing.JButton();
         optionButton = new javax.swing.JButton();
-        saveButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         Size = new javax.swing.JMenuBar();
         displayMenuItem = new javax.swing.JMenu();
         clearText = new javax.swing.JMenuItem();
@@ -198,6 +197,7 @@ public class Keyboard extends javax.swing.JFrame {
         size20 = new javax.swing.JRadioButtonMenuItem();
         fontMenu = new javax.swing.JMenu();
         verdanaStyleMenuItem = new javax.swing.JRadioButtonMenuItem();
+        timesStyleMenuItem = new javax.swing.JRadioButtonMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -443,12 +443,8 @@ public class Keyboard extends javax.swing.JFrame {
                 }
             });
 
-            saveButton.setText("SAVE File");
-            saveButton.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    saveButtonActionPerformed(evt);
-                }
-            });
+            jLabel1.setForeground(new java.awt.Color(204, 0, 51));
+            jLabel1.setText("Type something. Use the keyboard. Clicking the buttons with a mouse won't work. ");
 
             displayMenuItem.setText("Display");
 
@@ -490,7 +486,9 @@ public class Keyboard extends javax.swing.JFrame {
 
             styleMenu.setText("Style");
 
-            boldStyle.setText("Bold");
+            boldStyle.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+            boldStyle.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+            boldStyle.setText("<html><u>b</u>old</html>");
             boldStyle.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     boldStyleActionPerformed(evt);
@@ -498,7 +496,9 @@ public class Keyboard extends javax.swing.JFrame {
             });
             styleMenu.add(boldStyle);
 
-            italicStyle.setText("Italic");
+            italicStyle.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
+            italicStyle.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
+            italicStyle.setText("<html><u>i</u>talic</html>");
             italicStyle.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     italicStyleActionPerformed(evt);
@@ -510,6 +510,7 @@ public class Keyboard extends javax.swing.JFrame {
 
             sizeMenu.setText("Size");
 
+            size12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.CTRL_MASK));
             sizeButtonGroup.add(size12);
             size12.setSelected(true);
             size12.setText("12");
@@ -520,6 +521,7 @@ public class Keyboard extends javax.swing.JFrame {
             });
             sizeMenu.add(size12);
 
+            size16.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.CTRL_MASK));
             sizeButtonGroup.add(size16);
             size16.setText("16");
             size16.addActionListener(new java.awt.event.ActionListener() {
@@ -529,6 +531,7 @@ public class Keyboard extends javax.swing.JFrame {
             });
             sizeMenu.add(size16);
 
+            size20.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_MASK));
             sizeButtonGroup.add(size20);
             size20.setText("20");
             size20.addActionListener(new java.awt.event.ActionListener() {
@@ -542,6 +545,7 @@ public class Keyboard extends javax.swing.JFrame {
 
             fontMenu.setText("Font");
 
+            verdanaStyleMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
             verdanaStyleMenuItem.setSelected(true);
             verdanaStyleMenuItem.setText("Verdana");
             verdanaStyleMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -550,6 +554,16 @@ public class Keyboard extends javax.swing.JFrame {
                 }
             });
             fontMenu.add(verdanaStyleMenuItem);
+
+            timesStyleMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+            timesStyleMenuItem.setSelected(true);
+            timesStyleMenuItem.setText("Times New Roman");
+            timesStyleMenuItem.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    timesStyleMenuItemActionPerformed(evt);
+                }
+            });
+            fontMenu.add(timesStyleMenuItem);
 
             menuFormat.add(fontMenu);
 
@@ -697,8 +711,8 @@ public class Keyboard extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(0, 0, Short.MAX_VALUE))))
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(158, 158, 158)
-                    .addComponent(saveButton)
+                    .addGap(129, 129, 129)
+                    .addComponent(jLabel1)
                     .addGap(0, 0, Short.MAX_VALUE))
             );
 
@@ -707,9 +721,9 @@ public class Keyboard extends javax.swing.JFrame {
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(saveButton)
-                    .addGap(5, 5, 5)
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel1)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -820,7 +834,7 @@ public class Keyboard extends javax.swing.JFrame {
         //System.out.println("key released : " + evt.getKeyChar());
         //System.out.println(evt.getKeyCode()); //get ASCII code
         JButton releasedButton =  keyJButtons[evt.getKeyCode()];
-        releasedButton.setBackground(null);  
+        releasedButton.setBackground(null);  //reset colour
     }//GEN-LAST:event_jtaKeyReleased
 
     private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
@@ -962,7 +976,7 @@ public class Keyboard extends javax.swing.JFrame {
     }//GEN-LAST:event_setButtonColorActionPerformed
 
     private void size12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_size12ActionPerformed
-        Font font = new Font("Times New Roman", Font.PLAIN,16);
+        Font font = new Font("Times New Roman", Font.PLAIN,12);
         jta.setFont(font);
     }//GEN-LAST:event_size12ActionPerformed
 
@@ -982,9 +996,10 @@ public class Keyboard extends javax.swing.JFrame {
         jta.setFont(font);
     }//GEN-LAST:event_size20ActionPerformed
 
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveButtonActionPerformed
+    private void timesStyleMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timesStyleMenuItemActionPerformed
+        Font font = new Font("Times New Roman", Font.PLAIN,fontSize);
+        jta.setFont(font);
+    }//GEN-LAST:event_timesStyleMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1050,6 +1065,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton iButton;
     private javax.swing.JCheckBoxMenuItem italicStyle;
     private javax.swing.JButton jButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTextArea jta;
@@ -1075,7 +1091,6 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton rightsquarebracketButton;
     private javax.swing.JButton rigtharrowButton;
     private javax.swing.JButton sButton;
-    private javax.swing.JButton saveButton;
     private javax.swing.JMenuItem saveItem;
     private javax.swing.JMenuItem setButtonColor;
     private javax.swing.JMenuItem setColor;
@@ -1093,6 +1108,7 @@ public class Keyboard extends javax.swing.JFrame {
     private javax.swing.JButton tabButton;
     private javax.swing.JButton threeButton;
     private javax.swing.JButton tildeButton;
+    private javax.swing.JRadioButtonMenuItem timesStyleMenuItem;
     private javax.swing.JButton twoButton;
     private javax.swing.JButton uButton;
     private javax.swing.JButton uparrowButton;

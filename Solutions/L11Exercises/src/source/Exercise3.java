@@ -47,18 +47,14 @@ public class Exercise3 {
         System.out.println("\t|Avg");
     
         for (int i = 0; i < months.length; i++) {
-            
-            
 
             //print the row headers (the county name)
             System.out.print(counties[i] + "\t");
-            
-        
+                
             for (int j = 0; j < counties.length; j++) {
                 
                 //print the temperatures for each county
-                System.out.print(temperatures[i][j] + "\t");
-            
+                System.out.print(temperatures[i][j] + "\t");       
             }//end for
             
             //print the average temp for each county formatted to two decimal places

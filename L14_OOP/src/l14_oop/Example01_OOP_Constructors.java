@@ -6,7 +6,7 @@ package l14_oop;
  * Circle Object and Class example
  * note Circle class is in same project package so no need for Import
  * constructor has same name as class, in this case it is Circle
- * /method overloading, different methods with the same name
+ * method overloading, different methods with the same name
  * different in terms of parameters and profile (types and number of parameters they accept
  */
 public class Example01_OOP_Constructors {
